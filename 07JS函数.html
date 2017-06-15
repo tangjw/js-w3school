@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function myFunction() {
+            alert("Hello World!");
+        }
+        function myFunction1(var1) {
+            alert("Hello World!" + var1);
+        }
+
+        function myFunction2(var1) {
+            alert("Hello World!" + var1);
+            return 5 + 2;
+        }
+
+        function add(a, b) {
+            return a + b;
+        }
+        function change() {
+            document.getElementById("demo").innerHTML = add(3, 5)
+        }
+
+        carname = "BMW";
+
+    </script>
+
+</head>
+<body>
+
+<button onclick="myFunction1('按钮')">点击这里</button>
+<br>
+
+<p>计算结果：</p>
+<p id="demo">?</p>
+
+
+<button onclick="change()">点击这里</button>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a;
+    var b = 3.14;
+    var c = true;
+
+    console.log(typeof (a) + ", " + typeof b + ", " + typeof c);
+
+
+    var x1 = 34.00;      //使用小数点来写
+    var x2 = 34;         //不使用小数点来写
+
+    var y = 123e5;      // 12300000
+    var z = 123e-5;     // 0.00123
+
+    //s数组
+    var cars = new Array();
+    var cars = [];
+
+    cars[0] = "abc";
+    cars[1] = "bcd";
+    cars[2] = "cde";
+
+    var carss = ["abc", "abc", "abc"];
+
+    //对象
+    var person = {name: "zss", age: 14};
+
+    var name = person.name;
+    var age = person["age"];
+
+    //Undefined 和 Null 可以通过将变量的值设置为 null 来清空变量。
+
+    cars = null;
+    person = null;
+
+    console.log(typeof cars);
+    console.log(typeof person);
+
+    name = null;
+
+    console.log(typeof name);
+
+    var s = new String;
+    var q = new Number;
+    var w = new Boolean;
+    var e = new Array;
+    var r = new Object;
+
+    //均为object
+    console.log(typeof s + typeof q + typeof w + typeof e + typeof r)
+
+</script>
+
+
+</body>
+</html>

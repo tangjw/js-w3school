@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        var total = 0, count = 1;
+
+        while (count <= 10) {
+            total += count;
+            count++;
+        }
+
+        console.log(total)
+
+
+    </script>
+
+
+</head>
+<body>
+
+
+<p>
+    JavaScript 能够直接写入 HTML 输出流中：
+</p>
+
+<script>
+    document.write("<h1>This is a heading</h1>")
+    document.write("<p>This is a paragraph.</p>")
+</script>
+<p>
+    您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+    如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+</p>
+
+
+<button type="button" onclick="alert('Welcome!')">点击按钮</button>
+
+
+<p id="demo">JavaScript 能改变 HTML 元素的内容。</p>
+
+<script>
+    function myFun() {
+        var x = document.getElementById("demo");
+        x.innerHTML = "Hello JavaScript!";
+    }
+
+    function changeFontSize() {
+        var x = document.getElementById("demo");
+        x.style.fontSize = "20px";
+    }
+
+</script>
+
+<button type="button" onclick="myFun()">点击改变</button>
+<button type="button" onclick="changeFontSize()">点击改变字体大小</button>
+
+<br><br><br><br>
+
+
+<script>
+    function changeImage() {
+
+        var element = document.getElementById("myimage");
+
+
+
+        if (element.src.match("bulboff")) {
+            element.src = "http://www.w3school.com.cn/i/eg_bulbon.gif";
+        } else {
+            element.src = "http://www.w3school.com.cn/i/eg_bulboff.gif";
+        }
+
+    }
+
+</script>
+
+<img id="myimage" src="http://www.w3school.com.cn/i/eg_bulboff.gif" alt="light" onclick="changeImage()">
+
+<br><br><br><br><br>
+
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+
+<input type="text" id="myinput" title="输入数字" placeholder="1111">
+<button type="button" onclick="checkNumber()">点击这里</button>
+
+<script>
+    function checkNumber() {
+        var myinput = document.getElementById("myinput").value;
+        console.log(myinput);
+        if (myinput === ""||isNaN(myinput)) {
+            alert("不是数字！")
+        }
+    }
+</script>
+
+
+</body>
+</html>
