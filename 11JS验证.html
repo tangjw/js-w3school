@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function validate_required(field, alertTxt) {
+            with (field) {
+                if (value == null || value == "") {
+                    alert(alertTxt);
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+
+        function validate_form(thisForm) {
+            with (thisForm) {
+                if (validate_required(email, "Email must be filled out!") == false) {
+                    email.focus();
+                    return false
+                }
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<form action="submitpage.htm" onsubmit="return validate_form(this)" method="post">
+    Email: <input type="text" name="email" size="30">
+    <input type="submit" value="Submit">
+</form>
+</body>
+
+</body>
+</html>
